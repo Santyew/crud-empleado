@@ -1,7 +1,5 @@
 package crud.santiago.file;
 
-import crud.santiago.model.Empleado;
-import crud.santiago.operations.Operations;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -13,11 +11,14 @@ import java.time.format.DateTimeFormatter;
 import java.util.HashSet;
 import java.util.Set;
 
+import crud.santiago.model.Empleado;
+import crud.santiago.operations.Operations;
+
+
 /**
  * @author santiago
  * @version 1.0
  */
-
 public class FileOperations implements Operations {
     File fichero;
     String path = "crud-tarea\\src\\main\\java\\crud\\santiago\\resources\\empleados.txt"; 
@@ -70,7 +71,7 @@ public class FileOperations implements Operations {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] arrayLine = line.trim().split(",");
-                Empleado empleado = new Empleado(arrayLine[0], arrayLine[1], arrayLine[2], Double.valueOf(arrayLine[3]), arrayLine[4]);
+                Empleado empleado = new Empleado(arrayLine[0], arrayLine[1], arrayLine[2], Double.parseDouble(arrayLine[3]), arrayLine[4]);
                 empleados.add(empleado);
             }
         } catch (IOException e) {
@@ -201,4 +202,10 @@ public class FileOperations implements Operations {
         }
         return porEdad;
     }
+
+    @Override
+    public boolean delete(String identificador) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
 }
