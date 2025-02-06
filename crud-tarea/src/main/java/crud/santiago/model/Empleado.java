@@ -21,6 +21,15 @@ public class Empleado {
     public Empleado() {
 
     }
+    /**
+     * Constructor con el identificador 
+     * @param identificador
+     */
+    public Empleado(String identificador){
+        this.identificador = identificador;
+    
+    }
+
 
     /**
      * Constructor entero.
@@ -87,7 +96,7 @@ public class Empleado {
 
     @Override
     public String toString() {
-        return identificador + ", " + nombre + ", " + puesto + ", " + salario + ", " + fechaNacimiento;
+        return identificador + "," + nombre + "," + puesto + "," + salario + "," + fechaNacimiento;
     }
 
     @Override
