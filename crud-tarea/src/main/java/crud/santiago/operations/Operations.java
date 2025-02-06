@@ -1,5 +1,5 @@
 package crud.santiago.operations;
-import java.util.TreeMap;
+import java.util.Set;
 
 import crud.santiago.model.Empleado;
 
@@ -13,7 +13,9 @@ public interface Operations {
     Empleado read(String identificador);
     Empleado read(Empleado empleado);
     boolean update(Empleado empleado);
+    boolean delete(Empleado empleado);
     boolean delete(String identificador);
-    TreeMap<String,Empleado> empleadosPorPuesto(String puesto);
-    TreeMap<String,Empleado> empleadosPorEdad(String fechaInicio, String fechaFin);
+    Set<Empleado> empleadosPorPuesto(String puesto);
+    Set<Empleado> empleadosPorEdad(String fechaInicio, String fechaFin);
+    
 }
