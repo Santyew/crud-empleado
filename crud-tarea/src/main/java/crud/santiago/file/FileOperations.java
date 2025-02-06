@@ -20,7 +20,7 @@ import java.util.Set;
 
 public class FileOperations implements Operations {
     File fichero;
-    String path = "/Users/Santiago/Desktop/crud-tarea/src/main/java/crud/santiago/resources/empleados.txt"; 
+    String path = "crud-tarea\\src\\main\\java\\crud\\santiago\\resources\\empleados.txt"; 
 
     public FileOperations() {
         fichero = new File(path);
